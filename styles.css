@@ -12,20 +12,14 @@ body {
 
 .card {
     display: flex;
-    justify-content: center;
     width: 340px;
     height: 573px;
     background: #F7F7FA;
     padding: 25px;
     margin: 30px;
-}
-
-.card-content {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 290px;
 }
 
 .card img {
