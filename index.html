@@ -3,32 +3,31 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>product-card</title>
 </head>
 
 <body>
-<div class="card">
-  <img src="img/photo 1.png" alt="">
-  <div class="card-text">
-    <div class="card-text_category">для нормальной кожи</div>
-    <div class="card-text_title">Увлажняющий мусс</div>
-    <div>Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</div>
-    <div>
-      <span>Состав:</span>
-      <ul>
-        <li>активные натуральные комплексы</li>
-        <li>витамины С, А, РР, В И Е</li>
-        <li>солнцезащитные компоненты</li>
-      </ul>
+  <div class="card-container">
+    <img src="/images/moist-mousse.png" alt="moist-mousse" width="290" height="245">
+    <span class="product-category">для нормальной кожи</span>
+    <h3 class="product-name">Увлажняющий мусс</h3>
+    <p class="product-description">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
+    <span>Состав:</span>
+    <ul class="product-compound">
+      <li>активные натуральные комплексы</li>
+      <li>витамины С, А, РР, В И Е</li>
+      <li>солнцезащитные компоненты</li>
+    </ul>
+    <div class="product-price-container">
+      <span class="product-price-lable">Цена</span>
+      <span class="product-price">2750 &#8381</span>
     </div>
   </div>
-  <div class="card-price">
-    <div class="card-price_text">Цена</div>
-    <div class="card-price_total">2750<span>&#8381</span></div>
-  </div>
-</div>
 </body>
 
 </html>
