@@ -29,19 +29,23 @@ body {
 }
 
 .header-title {
+  display: block;
   font-size: 70px;
+  white-space: nowrap;
   line-height: 78px;
   font-weight: 400;
   margin-bottom: 110px;
-  position: absolute;
+  position: relative;
+  z-index: 1;
+  right: 35%;
 }
 
 .img-flowers {
   display: block;
   position: relative;
   z-index: -1;
-  top: 300px;
-  /* right: 14.5%; */
+  top: 70%;
+  left: 241px;
 }
 
 .product-container {
@@ -49,8 +53,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 45px;
-  position: relative;
-  z-index: 2;
 }
 
 .card-container {
