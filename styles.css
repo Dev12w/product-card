@@ -8,6 +8,7 @@
   font-weight: 400px;
   color: #515076;
   font-family: 'Montserrat', Courier, monospace;
+  list-style: none;
 }
 
 body {
@@ -25,9 +26,6 @@ body {
   justify-content: center;
   height: 408px;
   align-items: end;
-  background-image: url(/images/background-header.png);
-  background-repeat: repeat-x; 
-  background-position: center top;
 }
 
 .header-title {
@@ -35,6 +33,15 @@ body {
   line-height: 78px;
   font-weight: 400;
   margin-bottom: 110px;
+  position: absolute;
+}
+
+.img-flowers {
+  display: block;
+  position: relative;
+  z-index: -1;
+  top: 300px;
+  /* right: 14.5%; */
 }
 
 .product-container {
@@ -42,6 +49,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 45px;
+  position: relative;
+  z-index: 2;
 }
 
 .card-container {
