@@ -48,6 +48,26 @@ body {
   left: 241px;
 }
 
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.btn-card-style {
+  width: 50%;
+  background: #f7f7fa;
+  border: 1px solid #dad8f1;
+  box-shadow: 2px 2px 10px 0px #5150761a;
+  height: 40px;
+  margin: 5px;
+
+}
+
+.btn-bg-active{
+  background: #e0e0fdff;
+}
+
 .product-container {
   display: flex;
   justify-content: center;
