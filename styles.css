@@ -8,6 +8,51 @@
   font-weight: 400px;
   color: #515076;
   font-family: 'Montserrat', Courier, monospace;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.product-content {
+  width: 1110px;
+  padding-bottom: 71px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  height: 408px;
+  align-items: end;
+}
+
+.header-title {
+  display: block;
+  font-size: 70px;
+  white-space: nowrap;
+  line-height: 78px;
+  font-weight: 400;
+  margin-bottom: 110px;
+  position: relative;
+  z-index: 1;
+  right: 35%;
+}
+
+.img-flowers {
+  display: block;
+  position: relative;
+  z-index: -1;
+  top: 70%;
+  left: 241px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
 }
 
 .card-container {
@@ -57,8 +102,8 @@
   left: 0;
   top: 55%;
   transform: translateY(-50%);
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border: 1px solid #515076;
   border-radius: 50%;
   background: transparent;
@@ -79,4 +124,3 @@
   font-size: 20px;
   line-height: 24px;
 }
-
