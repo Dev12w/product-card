@@ -1,33 +1,34 @@
 //Изминение цвета фона всех карточек
 
-const productAllCards = document.querySelectorAll('.card-container');
+const allProductCards = document.querySelectorAll('.card-container');
 const setBackgroundAllCardsButton = document.querySelector('#bg-cards-btn');
-const colorAllCards = '#f1f1fcff';
-const colorFirstCard = '#e0e0fdff';
-const googleURL = 'http://google.com';
+const colorLavenderMist = '#f1f1fcff';
+
 
 setBackgroundAllCardsButton.addEventListener('click', () => {
-  productAllCards.forEach((card) => {
-    card.style.backgroundColor = colorAllCards;
+  allProductCards.forEach((card) => {
+    card.style.backgroundColor = colorLavenderMist;
   });
 });
 
 //Изминение цвета первой карточки из списка
 
-const firstCardList = document.querySelector('.card-container');
-const setBackgroundFirstCardListButton = document.querySelector('#bg-first-card-btn');
+const firstProductCard = document.querySelector('.card-container');
+const setBackgroundFirstCardButton = document.querySelector('#bg-first-card-btn');
+const colorLavenderBlue = '#e0e0fdff';
 
-setBackgroundFirstCardListButton.addEventListener('click', () => {
-  firstCardList.style.backgroundColor = colorFirstCard;
+setBackgroundFirstCardButton.addEventListener('click', () => {
+  firstProductCard.style.backgroundColor = colorLavenderBlue;
 });
 
 //Открыть страницу Google.com
 
-const goGooglePageButton = document.querySelector('#open-google');
+const openGooglePageButton = document.querySelector('#open-google');
+const googleURL = 'http://google.com';
 
-goGooglePageButton.addEventListener('click', modalWindowleavePage);
+openGooglePageButton.addEventListener('click', openGoogle);
 
-function modalWindowleavePage() {
+function openGoogle() {
   const requestMessage = confirm('Вы действительно хотите перейти на Google.com?');
 
   if (requestMessage === true) {
@@ -39,9 +40,9 @@ function modalWindowleavePage() {
 
 const headerElement = document.querySelector('.header-title');
 
-headerElement.addEventListener('mouseover', showHeaderInConsole);
+headerElement.addEventListener('mouseover', outputConsoleLog);
 
-function showHeaderInConsole() {
+function outputConsoleLog() {
   console.log(headerElement.textContent);
 }
 
@@ -50,5 +51,5 @@ function showHeaderInConsole() {
 const backgroundButtonToggle = document.querySelector('#toggle-bg-btn')
 
 backgroundButtonToggle.addEventListener('click', () => {
-  backgroundButtonToggle.classList.toggle('btn-bg-active')
+  backgroundButtonToggle.classList.toggle('bg-lavender-blue')
 })
