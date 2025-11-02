@@ -4,7 +4,6 @@ const allProductCards = document.querySelectorAll('.card-container');
 const setBackgroundAllCardsButton = document.querySelector('#bg-cards-btn');
 const colorLavenderMist = '#f1f1fcff';
 
-
 setBackgroundAllCardsButton.addEventListener('click', () => {
   allProductCards.forEach((card) => {
     card.style.backgroundColor = colorLavenderMist;
@@ -46,10 +45,10 @@ function outputConsoleLog() {
   console.log(headerElement.textContent);
 }
 
-//Переключатель цвета последней кнопкиЁё
+//Переключатель цвета последней кнопки
 
-const backgroundButtonToggle = document.querySelector('#toggle-bg-btn')
+const backgroundButtonToggle = document.querySelector('#toggle-bg-btn');
 
 backgroundButtonToggle.addEventListener('click', () => {
-  backgroundButtonToggle.classList.toggle('bg-lavender-blue')
-})
+  backgroundButtonToggle.classList.toggle('bg-lavender-blue');
+});
