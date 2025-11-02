@@ -46,7 +46,7 @@ function outputConsoleLog() {
   console.log(headerElement.textContent);
 }
 
-//Переключатель цвета последней кнопки
+//Переключатель цвета последней кнопкиЁё
 
 const backgroundButtonToggle = document.querySelector('#toggle-bg-btn')
 
