@@ -3,11 +3,11 @@
      и возвращает строку: "Сейчас в город, температура"
 */
 
-const showWeather = (city, temperature) => {
+const showWeatherMessage = (city, temperature) => {
   return `Сейчас в ${city} ${temperature}\u00B0C`;
 };
 
-console.log(showWeather('Марокко', 24));
+console.log(showWeatherMessage('Марокко', 24));
 
 /*
   3) Функция принимает значение скорости и
