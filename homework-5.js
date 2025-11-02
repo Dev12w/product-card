@@ -35,10 +35,10 @@ const price = 100;
 const buyProduct = budget => {
   budget >= price
     ? console.log(`${product} приобретены. Спасибо за покупку!`)
-    : console.log(`Вам не хватает ${price - budget}$, пополните баланс`)
+    : console.log(`Вам не хватает ${price - budget}\u0024, пополните баланс`)
 }
 
-console.log(buyProduct(110))
+console.log(buyProduct(90))
 
 /*
   5)Функция выводит в консоль информацию о человеке,
