@@ -3,11 +3,11 @@
      и возвращает строку: "Сейчас в город, температура"
 */
 
-const showWeatherMessage = (city, temperature) => {
+const getWeatherInfo = (city, temperature) => {
   return `Сейчас в ${city} ${temperature}\u00B0C`;
 };
 
-console.log(showWeatherMessage('Марокко', 24));
+console.log(getWeatherInfo('Марокко', 24));
 
 /*
   3) Функция принимает значение скорости и
@@ -32,13 +32,13 @@ console.log(checkSpeed(350));
 const product = "Наушники";
 const price = 100;
 
-const buyProduct = budget => {
+const getPurchaseInfo = budget => {
   return budget >= price
     ? `${product} приобретены. Спасибо за покупку!`
     : `Вам не хватает ${price - budget}\u0024, пополните баланс`
 }
 
-console.log(buyProduct(90))
+console.log(getPurchaseInfo(90))
 
 /*
   5)Функция выводит в консоль информацию о человеке,
@@ -49,8 +49,8 @@ const name  = 'Зейд';
 const age = '30';
 const city = 'Дубай';
 
-const showInfoUser = () => {
+const showUserInfo= () => {
   return `Меня зовут ${name}, мне ${age} лет, живу в городе ${city}`
 }
 
-console.log(showInfoUser());
+console.log(showUserInfo());
