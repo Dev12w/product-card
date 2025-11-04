@@ -16,10 +16,8 @@ console.log(getWeatherInfo('Марокко', 24));
 
 const SPEED_SOUND = 343;
 
-const checkSpeed = speed => {
-  return speed > SPEED_SOUND 
-    ? 'Сверхзвуковая скорость' 
-    : 'Дозвуковая скорость';
+const checkSpeed = (speed) => {
+  return speed > SPEED_SOUND ? 'Сверхзвуковая скорость' : 'Дозвуковая скорость';
 };
 
 console.log(checkSpeed(350));
@@ -29,28 +27,26 @@ console.log(checkSpeed(350));
     хватает ли денег на покупку товара.
 */
 
-const product = "Наушники";
+const product = 'Наушники';
 const price = 100;
 
-const getPurchaseInfo = budget => {
-  return budget >= price
-    ? `${product} приобретены. Спасибо за покупку!`
-    : `Вам не хватает ${price - budget}\u0024, пополните баланс`
-}
+const getPurchaseInfo = (budget) => {
+  return budget >= price ? `${product} приобретены. Спасибо за покупку!` : `Вам не хватает ${price - budget}\u0024, пополните баланс`;
+};
 
-console.log(getPurchaseInfo(90))
+console.log(getPurchaseInfo(90));
 
 /*
   5)Функция выводит в консоль информацию о человеке,
     используя три переменные: имя, возраст и город
 */
 
-const name  = 'Зейд';
+const name = 'Зейд';
 const age = '30';
 const city = 'Дубай';
 
-const showUserInfo= () => {
-  return `Меня зовут ${name}, мне ${age} лет, живу в городе ${city}`
-}
+const showUserInfo = () => {
+  return `Меня зовут ${name}, мне ${age} лет, живу в городе ${city}`;
+};
 
 console.log(showUserInfo());
