@@ -17,7 +17,9 @@ console.log(getWeatherInfo('Марокко', 24));
 const SPEED_SOUND = 343;
 
 const checkSpeed = (speed) => {
-  return speed > SPEED_SOUND ? 'Сверхзвуковая скорость' : 'Дозвуковая скорость';
+  return speed > SPEED_SOUND 
+    ? 'Сверхзвуковая скорость' 
+    : 'Дозвуковая скорость';
 };
 
 console.log(checkSpeed(350));
@@ -31,7 +33,9 @@ const product = 'Наушники';
 const price = 100;
 
 const getPurchaseInfo = (budget) => {
-  return budget >= price ? `${product} приобретены. Спасибо за покупку!` : `Вам не хватает ${price - budget}\u0024, пополните баланс`;
+  return budget >= price 
+    ? `${product} приобретены. Спасибо за покупку!` 
+    : `Вам не хватает ${price - budget}\u0024, пополните баланс`;
 };
 
 console.log(getPurchaseInfo(90));
