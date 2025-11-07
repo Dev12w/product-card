@@ -82,7 +82,7 @@ const cars = [
     model: "Civic",
     year: 2025,
     color: "Пурпурный",
-    engine: "1.5",
+    engine: "1.5"
   },
   {
     brand: "Ford",
@@ -96,7 +96,7 @@ const cars = [
     model: "Sportage",
     year: 2020,
     color: "Белый",
-    engine: "2.0",
+    engine: "2.0"
   }
 ];
 
@@ -105,7 +105,7 @@ cars.push({
   model: "Model 3",
   year: 2021,
   color: "Синий",
-  engine: "761 кВт",
+  engine: "761 кВт"
 });
 
 
@@ -120,14 +120,14 @@ const jeepCars = [
     model: "Wrangler",
     year: 2022,
     color: "Кварц",
-    engine: "3.6 V6",
+    engine: "3.6 V6"
   },
   {
     brand: "Jeep",
     model: "Grand Cherokee",
     year: 2018,
     color: "Черный",
-    engine: "3.0 дизель",
+    engine: "3.0 дизель"
   }
 ];
 
