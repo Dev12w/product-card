@@ -34,7 +34,7 @@ car.carOwner = { ...userProfile }
 
 const addSpeedProperty = car => {
   if (!car.hasOwnProperty('maxSpeed')) {
-    carObj.maxSpeed = 400
+    car.maxSpeed = 400
   }
 }
 
