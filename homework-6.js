@@ -14,7 +14,7 @@ const userProfile = {
 };
 
 
-// 4) Объект с информацией о машине, с присваиванием свойсва содержащий объект владельце.
+// 4) Объект с информацией о машине, добовляем к нему свойсва и значение его объект.
 
 
 const car = {
@@ -32,13 +32,13 @@ car.carOwner = { ...userProfile }
    и проверяет если свойство и значение, если нет то добавляет.
 */
 
-const addSpeedProperties = carObj => {
+const addSpeedProperty = carObj => {
   if (!carObj.hasOwnProperty('maxSpeed')) {
     carObj.maxSpeed = 400
   }
 }
 
-addSpeedProperties(car)
+addSpeedProperty(car)
 
 
 /*
@@ -138,7 +138,7 @@ const allCars = [...cars, ...jeepCars];
 
 /*
 10) Функцию которая принимает массив cars, 
- с помощью метода перебора массива добавляем новое свойства с boolean значением.
+    с помощью метода перебора массива добавляем новое свойства с значением boolean.
 */
 
 const addRareProperties = (cars) => {
