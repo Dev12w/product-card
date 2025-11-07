@@ -32,8 +32,8 @@ car.carOwner = { ...userProfile }
    и проверяет если свойство и значение, если нет то добавляет.
 */
 
-const addSpeedProperty = carObj => {
-  if (!carObj.hasOwnProperty('maxSpeed')) {
+const addSpeedProperty = car => {
+  if (!car.hasOwnProperty('maxSpeed')) {
     carObj.maxSpeed = 400
   }
 }
@@ -46,8 +46,8 @@ addSpeedProperty(car)
    а вторым аргументом свойство объекта, выводит его значение.
 */
 
-const showPropertyValue = (carObj, property) => {
-  if (carObj.hasOwnProperty(property)) {
+const showPropertyValue = (car, property) => {
+  if (car.hasOwnProperty(property)) {
     console.log(carObj[property])
   }
 }
