@@ -1,10 +1,13 @@
 import { comments } from './comments.js'
 
+//2) Массив строк с фильтрацией.
 
-const nambers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const filteredNumbers = nambers.filter( namber => namber >= 5 )
+const filteredNumbers = numbers.filter(number => number >= 5)
 
+
+//3) Массив сущностей, с проверкой сушности.
 
 const tools = [
   "Ударный гайкаверт",
@@ -19,46 +22,69 @@ const tools = [
   "Сверло по металлу"
 ];
 
-const checkTool = ( tools, tool ) => tools.includes( tool )
+const checkTool = (tools, tool) => tools.includes(tool)
 
 checkTool(tools, "Отвертка фигурная");
 
 
-const reverseArrays = ( nambers, tools ) => 
- [ nambers, tools ].map( arr => arr.reverse())
+//4) Функция принимает два массива и переверачивает. 
 
-reverseArrays( nambers, tools )
+const reverseArrays = (numbers, tools) => {
+  numbers.reverse();
+  tools.reverse();
+  return {numbers, tools}
+}
+
+reverseArrays(numbers, tools)
 
 
-const filteredComments = comments.filter( comment => comment.email.includes(".com") )
+//5) Создан файл комментариев, импортирован в начале файла.
 
-const commentsText = filteredComments.map( comment => comment.body )  
+//6) Создана const export
+
+//7) Фильтрует массив по email (".com") и собирает тексты комментариев в новый массив.
+
+const filteredComments = comments.filter(comment => comment.email.includes(".com"))
+const commentsText = filteredComments.map(comment => comment.body)
 
 
-const updatedCommentsPostId= comments.map(comment => ({
-    ...comment, 
-    postId: comment.id <= 5 ? 2 : 1 
+//8) Переберает массив, проверяет значение postId, создает копию массива сновым значением postId.
+
+const updatedCommentsPostId = comments.map(comment => ({
+  ...comment,
+  postId: comment.id <= 5 ? 2 : 1
 }))
 
 
-const commentsIdNameList = comments.map( comment => ({
-    id: comment.id,
-    name: comment.name
+//9) Переберает массив comments по его id и name, и возврашает новый массив только из id и name. 
+
+const commentsIdNameList = comments.map(comment => ({
+  id: comment.id,
+  name: comment.name
 }))
 
 
-const validatedComments = comments.map( comment => ({
+//10) Переберает массив, проверяет длинну текста по условию, и создает новый массива свойством isInvalid: boolean значением.
+
+const validatedComments = comments.map(comment => ({
   ...comment,
   isInvalid: comment.body.length > 180
 }))
 
 
-const emailsList = comments.reduce(( emails, comment ) => {
+//11) Перебор массива comment, при каждом получении значения email, добовляет в новый массив emails.
+//    При каждом добавлениии в emails он итерируется создовая новую копию, и содержит уже в себе придедушие значения.
+
+const emailsList = comments.reduce((emails, comment) => {
   return [...emails, comment.email]
 }, [])
 
-const emailsArray = comments.map( comment => comment.email)
+const emailsArray = comments.map(comment => comment.email)
 
+
+//12) Строчные методы: 
+// toString преобразует все к одной строке.
+// join преобразует все к одной строке с добовлением пробелов символов между слов строки.
 
 const emailsListString = emailsList.toString()
 const emailsListJoin = emailsList.join(" ")
