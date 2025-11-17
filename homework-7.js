@@ -29,14 +29,10 @@ checkTool(tools, "Отвертка фигурная");
 
 //4) Функция принимает два массива и переверачивает. 
 
-const reverseArrays = (numbers, tools) => {
-  numbers.reverse();
-  tools.reverse();
-  return {numbers, tools}
-}
+const reverseArray = arr => arr.reverse()
 
-reverseArrays(numbers, tools)
-
+reverseArray(numbers)
+reverseArray(tools)
 
 //5) Создан файл комментариев, импортирован в начале файла.
 
