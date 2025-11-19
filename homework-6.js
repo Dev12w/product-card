@@ -141,8 +141,4 @@ const allCars = [...cars, ...jeepCars];
     с помощью метода перебора массива добавляем новое свойства с значением boolean.
 */
 
-const addRareProperties = cars.map(car => {
-  return {
-    ...car, isRare: car.year <= 2023 ? true : false
-  }
-})
+const addRareProperties = cars.map(car => ({...car, isRare: car.year <= 2023}))

@@ -71,7 +71,7 @@ const validatedComments = comments.map(comment => ({
 //11) Перебор массива comment, при каждом получении значения email, добовляет в новый массив emails.
 //    При каждом добавлениии в emails он итерируется создовая новую копию, и содержит уже в себе придедушие значения.
 
-const emailsList = comments.reduce((emails, comment) => [...emails, comment.email], [])
+const emailsList = comments.reduce((emails, comment) => [...emails, comment.email],[])
 
 const emailsArray = comments.map(comment => comment.email)
 
