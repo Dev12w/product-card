@@ -48,7 +48,7 @@ addSpeedProperty(car)
 
 const showPropertyValue = (car, property) => {
   if (car.hasOwnProperty(property)) {
-    console.log(car[property])
+    car[property]
   }
 }
 

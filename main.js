@@ -42,7 +42,7 @@ const headerElement = document.querySelector('.header-title');
 headerElement.addEventListener('mouseover', outputConsoleLog);
 
 function outputConsoleLog() {
-  console.log(headerElement.textContent);
+  headerElement.textContent;
 }
 
 //Переключатель цвета последней кнопки

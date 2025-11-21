@@ -64,7 +64,7 @@ body {
 
 }
 
-.bg-lavender-blue{
+.bg-lavender-blue {
   background: #e0e0fdff;
 }
 
@@ -76,6 +76,10 @@ body {
 }
 
 .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 340px;
   height: 573px;
   background: #f7f7fa;
@@ -104,19 +108,19 @@ body {
   margin-bottom: 15px;
 }
 
-.product-compound {
+.product-compound-list {
   margin-top: 5px;
   margin-bottom: 25px;
 }
 
-.product-compound li {
+.product-compound {
   display: block;
   align-items: center;
   position: relative;
   padding-left: 15px;
 }
 
-.product-compound li::before {
+.product-compound::before {
   content: '';
   position: absolute;
   left: 0;
