@@ -3,33 +3,35 @@
 
 import { cards } from "./product-cards.js";
 
+// 6*. Функция которая принимает в поле ввода от 1 до 5 и отображает карточки, с валидацией.
+
 const productContainer = document.querySelector(".product-container")
 const cardContainer = document.querySelector(".product-template-container")
 const textContentError = document.querySelector(".textContentError")
 const input = document.querySelector(".product-cards-input")
 
-// 6*. Функция которая принимает в поле ввода от 1 до 5 и отображает карточки, с валидацией.
-
 input.addEventListener('change', () => {
-  const value = input.value
-  productContainer.innerHTML = '';
+
+  productContainer.innerHTML = ''
   textContentError.textContent = ''
 
-  if (isNaN(value)) {
+  if (isNaN(input.value)) {
     textContentError.textContent = 'Введите число!'
-    value = '';
+    input.value = ''
   }
-  if (value > 5) {
+  if (input.value > cards.length) {
     textContentError.textContent = 'Введите число от 1 до 5'
-    value = '';
+    input.value = ''
   }
 
-  const selectedCards = cards.slice(0, value)
+
+  const selectedCards = cards.slice(0, input.value)
+  input.value = ''
 
   //3. Шаблон для продуктовых карточек.
 
   selectedCards.forEach(product => {
-    const productCard = cardContainer.content.cloneNode(true);
+    const productCard = cardContainer.content.cloneNode(true)
     productCard.querySelector(".product-card-image").src = product.image
     productCard.querySelector(".product-category").textContent = product.category
     productCard.querySelector(".product-name").textContent = product.name
@@ -38,19 +40,18 @@ input.addEventListener('change', () => {
 
     productCard.querySelector(".product-compound-list").innerHTML = product.compoundList
       .map(compound => `<li class="product-compound">${compound}</li>`)
-      .join("");
+      .join("")
 
     productCard.querySelector(".product-price-lable").textContent = product.lable
     productCard.querySelector(".product-price").textContent = product.price + " \u20BD"
     productContainer.appendChild(productCard)
   })
-  input.value = ''
 })
 
 
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
-const productNamesList = cards.reduce((acc, card) => acc === "" ? card.name : acc + "; " + card.name, "");
+const productNamesList = cards.reduce((acc, card) => acc === "" ? card.name : acc + "; " + card.name, "")
 
 
 // 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
