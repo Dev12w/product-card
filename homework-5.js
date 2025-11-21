@@ -7,7 +7,7 @@ const getWeatherInfo = (city, temperature) => {
   return `Сейчас в ${city} ${temperature}\u00B0C`;
 };
 
-console.log(getWeatherInfo('Марокко', 24));
+getWeatherInfo('Марокко', 24);
 
 /*
   3) Функция принимает значение скорости и
@@ -22,7 +22,7 @@ const checkSpeed = (speed) => {
     : 'Дозвуковая скорость';
 };
 
-console.log(checkSpeed(350));
+checkSpeed(350);
 
 /*
   4)Функция принимает текущий бюджет пользователя и проверяет,
@@ -38,7 +38,7 @@ const getPurchaseInfo = (budget) => {
     : `Вам не хватает ${price - budget}\u0024, пополните баланс`;
 };
 
-console.log(getPurchaseInfo(90));
+getPurchaseInfo(90);
 
 /*
   5)Функция выводит в консоль информацию о человеке,
@@ -53,4 +53,4 @@ const showUserInfo = () => {
   return `Меня зовут ${name}, мне ${age} лет, живу в городе ${city}`;
 };
 
-console.log(showUserInfo());
+showUserInfo();
