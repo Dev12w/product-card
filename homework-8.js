@@ -17,16 +17,16 @@ input.addEventListener('change', () => {
 
   if (isNaN(value)) {
     textContentError.textContent = 'Введите число!'
-    input.value = '';
+    value = '';
   }
   if (value > 5) {
     textContentError.textContent = 'Введите число от 1 до 5'
-    input.value = '';
+    value = '';
   }
 
   const selectedCards = cards.slice(0, value)
 
-//3. Шаблон для продуктовых карточек.
+  //3. Шаблон для продуктовых карточек.
 
   selectedCards.forEach(product => {
     const productCard = cardContainer.content.cloneNode(true);
