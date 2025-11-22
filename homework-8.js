@@ -32,7 +32,7 @@ input.addEventListener('change', () => {
 
   selectedCards.forEach(product => {
     const productCard = cardContainer.content.cloneNode(true)
-    productCard.querySelector(".product-card-image").src = `/images/${product.image}`
+    productCard.querySelector(".product-card-image").src = `/images/${product.image}.png`
     productCard.querySelector(".product-category").textContent = product.category
     productCard.querySelector(".product-name").textContent = product.name
     productCard.querySelector(".product-description").textContent = product.description
@@ -49,9 +49,7 @@ input.addEventListener('change', () => {
 
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
-const productNamesList = cards.reduce((acc, card) => [...acc, card.name], [])
-      .map(product => `${product};`)
-      .join(" ")
+const productNamesList = cards.reduce((acc, card) => [...acc, card.name], []).join("; ")
 
 
 // 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
