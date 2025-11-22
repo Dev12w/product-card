@@ -1,4 +1,4 @@
-// 1. Cоздаем отдельный файл для homework-8 module
+// 1. Cоздан отдельный файл для homework-8 module
 // 2. Создан файл product-cards c с массивом карточек
 
 import { cards } from "./product-cards.js";
@@ -32,17 +32,15 @@ input.addEventListener('change', () => {
 
   selectedCards.forEach(product => {
     const productCard = cardContainer.content.cloneNode(true)
-    productCard.querySelector(".product-card-image").src = product.image
+    productCard.querySelector(".product-card-image").src = `/images/${product.image}`
     productCard.querySelector(".product-category").textContent = product.category
     productCard.querySelector(".product-name").textContent = product.name
     productCard.querySelector(".product-description").textContent = product.description
-    productCard.querySelector(".product-compound-text").textContent = product.compoundText
 
     productCard.querySelector(".product-compound-list").innerHTML = product.compoundList
       .map(compound => `<li class="product-compound">${compound}</li>`)
       .join("")
 
-    productCard.querySelector(".product-price-lable").textContent = product.lable
     productCard.querySelector(".product-price").textContent = product.price + " \u20BD"
     productContainer.appendChild(productCard)
   })
@@ -51,9 +49,11 @@ input.addEventListener('change', () => {
 
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
-const productNamesList = cards.reduce((acc, card) => acc === "" ? card.name : acc + "; " + card.name, "")
+const productNamesList = cards.reduce((acc, card) => [...acc, card.name], [])
+      .map(product => `${product};`)
+      .join(" ")
 
 
 // 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
-const productsDescriptions = cards.reduce((acc, card) => [...acc, { [card.name]: card.description }], [])
+const productsDescriptions = cards.reduce((acc, card) => [...acc, {[card.name]: card.description }], [])

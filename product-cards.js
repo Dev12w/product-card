@@ -1,6 +1,6 @@
 export const cards = [
   {
-    image: "/images/moist-mousse.png",
+    image: "moist-mousse.png",
     category: "для нормальной кожи",
     name: "Увлажняющий мусс",
     description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.",
@@ -10,11 +10,10 @@ export const cards = [
       "витамины С, А, РР, В и Е",
       "солнцезащитные компоненты"
     ],
-    lable: "Цена",
     price: 2750
   },
   {
-    image: "/images/moist-mask.png",
+    image: "moist-mask.png",
     category: "для нормальной кожи",
     name: "Увлажняющая маска",
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
@@ -24,11 +23,10 @@ export const cards = [
       "минералы",
       "масла"
     ],
-    lable: "Цена",
     price: 3500
   },
   {
-    image: "/images/cleansing-gel.png",
+    image: "cleansing-gel.png",
     category: "для нормальной кожи",
     name: "Гель для умывания",
     description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
@@ -38,11 +36,10 @@ export const cards = [
       "витамины С, А, РР, В И Е",
       "солнцезащитные компоненты"
     ],
-    lable: "Цена",
     price: 1650
   },
   {
-    image: "/images/gift-set-1.png",
+    image: "gift-set-1.png",
     category: "для нормальной кожи",
     name: "Подарочный набор №1",
     description: "Набор, состоящий из увлажняющего крема и маски.",
@@ -52,11 +49,10 @@ export const cards = [
       "минералы",
       "масла"
     ],
-    lable: "Цена",
     price: 4750
   },
   {
-    image: "/images/gift-set-5.png",
+    image: "gift-set-5.png",
     category: "для нормальной кожи",
     name: "Подарочный набор №5",
     description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
@@ -66,7 +62,6 @@ export const cards = [
       "минералы",
       "масла"
     ],
-    lable: "Цена",
     price: 7520
   },
 ]
