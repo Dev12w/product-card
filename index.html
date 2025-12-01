@@ -12,7 +12,16 @@
 </head>
 
 <body>
+
+
+
+
+
   <div class="product-content">
+    <div class="btn-registration-container">
+      <button class="btn-registration btn-registration-style" type="button">Регистрация</button>
+      <button class="btn-login btn-registration-style" type="button">Вход</button>
+    </div>
     <div class="header-container">
       <img class="img-flowers" src="/images/header-flowers.png" alt="flowers" width="790px" height="697px">
       <h1 class="header-title">Выбери свой продукт</h1>
@@ -23,13 +32,11 @@
       <button id="open-google" class="btn-card-style">Открыть страницу Google.com</button>
       <button id="toggle-bg-btn" class="btn-card-style">Переключить цвет кнопки</button>
     </div>
-
     <div class="product-input-container">
       <input class="product-cards-input" type="text" placeholder="Введите число карточек от 1-5">
       <span class="textContentError"></span>
     </div>
     <ul class="product-container"></ul>
-
     <template class="product-template-container">
       <li class="card-container">
         <img class="product-card-image" alt="image" width="290px" height="245px">
@@ -45,11 +52,103 @@
       </li>
     </template>
   </div>
+  <footer class="product-footer-content">
+    <div class="footer-offers-container">
+      <h2 class="footer-title">Product Cards</h2>
+      <span class="footer-offers-text">У Нас Самые Лучшие Продукты Для Кожи!</span>
+      <div class="footer-social-icon-container">
+        <img src="/images/telegram-icon.svg" alt="telegram">
+        <img src="/images/vk-icon.svg" alt="vk">
+      </div>
+    </div>
+    <div class="footer-email-container">
+      <span class="footer-email-subscribe-text">Подпишись на наши акции:</span>
+      <form class="footer-email-form-container">
+        <input class="footer-email-input" name="email" placeholder="Введи Email...">
+        <div class="footer-email-input-line"></div>
+        <button class="footer-email-btn-subscribe">Подписаться</button>
+      </form>
+
+      <div class="footer-email-bottom-line"></div>
+      <span class="footer-email-address-text">www.product-cards.com&copy;all right reserve</span>
+    </div>
+    <nav class="footer-nav-container">
+      <div class="footer-nav-link-container">
+        <span class="footer-nav-title">Быстрые ссылки</span>
+        <a class="footer-nav-link" href="#">Главная</a>
+        <a class="footer-nav-link" href="#">Магазин</a>
+        <a class="footer-nav-link" href="#">Контакты</a>
+      </div>
+    </nav>
+  </footer>
+
+
+
+  <template class="form-registration-content">
+    <div class="modal">
+      <form class="form">
+        <button class="modal-close-button" type="button">X</button>
+        <label>
+          <span class="form-label form-name">Имя</span>
+          <input type="text" required name="firstname" placeholder="Имя" class="form-input" id="form-input-name">
+        </label>
+        <label>
+          <span class="form-label form-reg-">Фамилия</span>
+          <input type="text" required name="surname" placeholder="Фамилия" class="form-input" id="form-input-surname">
+        </label>
+        <label>
+          <span class="form-label">Дата рождения</span>
+          <input type="date" required name="birthday" placeholder="Дата рождения" class="form-input"
+            id="form-input-date">
+        </label>
+        <label>
+          <span class="form-label ">Логин</span>
+          <input type="email" required name="email" placeholder="Ваш email" class="form-input" id="form-input-email">
+          <span class="error-email"></span>
+        </label>
+        <label>
+          <span class="form-label">Пароль</span>
+          <input type="password" required name="password" placeholder="Пароль" class="form-input"
+            id="form-input-password">
+          <span class="error-password"></span>
+        </label>
+        <label>
+          <span class="form-label">Пароль (еще раз)</span>
+          <input type="password" required name="passwordrepeat" placeholder="Пароль" class="form-input"
+            id="form-input-passwordrepeat">
+          <span class="error-passwordrepeat"></span>
+          <span class="error-text"></span>
+        </label>
+        <button class="enter-button" type="button">Отправить</button>
+      </form>
+    </div>
+  </template>
+
+
+  <template class="form-login-content">
+    <div class="modal">
+      <form class="form">
+        <button class="modal-close-button" type="button">X</button>
+        <label>
+          <span class="form-label">Логин</span>
+          <input type="email" name="email" placeholder="Ваш email" class="form-input">
+        </label>
+        <label>
+          <span class="form-label">Пароль</span>
+          <input type="password" name="password" placeholder="Пароль" class="form-input">
+        </label>
+        <span class="error-text"></span>
+        <button class="enter-button" type="button">Войти</button>
+      </form>
+    </div>
+  </template>
+
   <script src="main.js"></script>
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>
   <script type="module" src="homework-7.js"></script>
   <script type="module" src="homework-8.js"></script>
+  <script src="homework-9.js"></script>
 </body>
 
 </html>
