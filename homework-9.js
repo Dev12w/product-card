@@ -5,10 +5,8 @@ const footerEmail = document.querySelector('.footer-email-form-container')
 const emailValidationRegexp = /^[^\s]+@gmail\.com$/
 
 buttonSubscribe.addEventListener('click', (e) => {
-
   const formData = new FormData(footerEmail)
   const data = Object.fromEntries(formData)
-
 
   if (!emailValidationRegexp.test(data.email)) {
     console.log('Некорректный email!')
@@ -87,9 +85,8 @@ formRegBtn.addEventListener('click', () => {
     firstname: data.firstname,
     surname: data.surname,
     birthday: data.birthday,
-  };
-
-  currentUser.createdOn = new Date()
+    createdOn: new Date()
+  }
 
   passwordRepeatErrorText.classList.add('successful-reg')
   passwordRepeatErrorText.textContent = 'Успешная регистрация'
@@ -112,7 +109,6 @@ const modalLoginCloseBtn = document.querySelector('.modal-login-close-button')
 modalLoginCloseBtn.addEventListener('click', () => {
   modalLogin.classList.remove('modal-showed')
 })
-
 
 const loginEnterBtn = document.querySelector('.login-enter-button')
 
