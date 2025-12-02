@@ -22,13 +22,13 @@ body {
   flex-direction: column;
 }
 
-.btn-registration-container {
+.registration-container {
   display: flex;
   width: 100%;
   justify-content: end;
 }
 
-.btn-registration-style {
+.btn-show-modal {
   margin-left: 5px;
   margin-top: 10px;
   width: 130px;
@@ -37,7 +37,7 @@ body {
   background: #f7f7fa;
 }
 
-.btn-registration-style:hover {
+.btn-show-modal:hover {
   background: #e9e9fd;
 }
 
@@ -329,7 +329,7 @@ body {
 }
 
 .modal {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -341,6 +341,10 @@ body {
   left: 0;
 }
 
+.modal-showed {
+  display: flex;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -349,18 +353,18 @@ body {
   padding: 20px;
 }
 
-.form span {
+.form-label {
   display: flex;
 }
 
-.modal-close-button {
+.close-button {
   width: 20px;
   height: 20px;
   margin-left: auto;
   background: #f7f7fa;
 }
 
-.modal-close-button:hover {
+.close-button:hover {
   background: #edeafa;
 }
 
@@ -377,19 +381,15 @@ body {
   margin-top: 15px;
 }
 
-.enter-button {
+.enter-btn {
   width: 300px;
   height: 35px;
   margin-top: 20px;
   background: #e4e2f5;
 }
 
-.enter-button:hover {
+.enter-btn:hover {
   background: #edeafa;
-}
-
-.form-login-container {
-  display: flex;
 }
 
 .error {
@@ -412,14 +412,10 @@ body {
   color: red
 }
 
+.login-error-text {
+  color: red;
+}
+
 .successful-reg {
   color: green
 }
-
-.input-bg {
-  background: red;
-}
-
-/* .form input {
-  background: red;
-} */
