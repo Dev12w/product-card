@@ -1,10 +1,12 @@
-// 4. Форме, которая прикреплена в футере добавлина логика.
+import {Form} from "./homework-10/Form.js";
+import {Modal} from "./homework-10/Modal.js";
+
+// 4. Форма, которая прикреплена в футере добавлена логика.
 
 const buttonSubscribe = document.querySelector('.footer-email-btn-subscribe')
 const footerEmail = document.querySelector('.footer-email-form-container')
-const emailValidationRegexp = /^[^\s]+@gmail\.com$/
 
-buttonSubscribe.addEventListener('click', (e) => {
+buttonSubscribe.addEventListener('click', () => {
   const formData = new FormData(footerEmail)
   const data = Object.fromEntries(formData)
 
@@ -15,119 +17,78 @@ buttonSubscribe.addEventListener('click', (e) => {
   console.log(data)
 })
 
-// 5.Модальное окно формы регестрации. 
-// поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля. 
 
+// 5. Модальное окно формы регистрации.
+// Поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
+//
 // 6. Сохраняем этот объект в переменную для дальнейшего использования.
-const modalReg = document.querySelector('.modal-reg')
+
+
 const btnRegistration = document.querySelector('.btn-registration')
-let currentUser = undefined;
+const regFormElement = document.querySelector('.form-reg')
+const loginFormElement = document.querySelector('.form-login')
+const btnLogin = document.querySelector('.btn-login')
 
-btnRegistration.addEventListener('click', () => {
-  modalReg.classList.add('modal-showed')
+let currentUser
+
+const modalReg = new Modal('#modal-reg')
+const modalLogin = new Modal('#modal-login')
+const regForm = new Form('.form-reg')
+const loginForm = new Form('.form-login')
+
+btnRegistration.addEventListener('click', (e) => {
+  e.preventDefault()
+  modalReg.open()
 })
 
-const modalRegCloseBtn = document.querySelector('.modal-reg-close-button')
+regFormElement.addEventListener('submit', (e) => {
+  e.preventDefault()
 
-modalRegCloseBtn.addEventListener('click', () => {
-  modalReg.classList.remove('modal-showed')
-})
-
-const registrationForm = document.querySelector('.form-reg')
-const formRegBtn = document.querySelector('.reg-enter-button')
-
-formRegBtn.addEventListener('click', () => {
-  const formInputs = registrationForm.querySelectorAll('input');
-  let hasError = false;
-
-  formInputs.forEach(el => {
-    el.classList.remove('error');
-
-    if (el.hasAttribute('required') && el.value.trim() === '') {
-      el.classList.add('error');
-      hasError = true;
-      return
-    }
-    const formErrorEmailText = document.querySelector('.error-email')
-
-    if (el.type == "email") {
-      formErrorEmailText.textContent = '';
-      if (!emailValidationRegexp.test(el.value)) {
-        el.classList.add('error')
-        formErrorEmailText.textContent = 'Некоректный email'
-        hasError = true;
-      }
-    }
-  })
-
-  const formData = new FormData(registrationForm)
-  const data = Object.fromEntries(formData)
-
-  const passwordRepeatErrorText = document.querySelector('.error-passwordrepeat')
-  const passwordRepeat = document.querySelector('#form-input-passwordrepeat');
-
-  if (data.password !== data.passwordrepeat) {
-    passwordRepeat.classList.add('error')
-    passwordRepeatErrorText.textContent = 'Пароли не совпадают'
-    hasError = true;
-  } else {
-    passwordRepeat.classList.remove('error')
-    passwordRepeatErrorText.textContent = ''
-  }
-
-  if (hasError) {
-    return;
-  }
-
-  currentUser = {
-    email: data.email,
-    password: data.password,
-    firstname: data.firstname,
-    surname: data.surname,
-    birthday: data.birthday,
-    createdOn: new Date()
-  }
-
-  passwordRepeatErrorText.classList.add('successful-reg')
-  passwordRepeatErrorText.textContent = 'Успешная регистрация'
-  registrationForm.reset();
-  formInputs.forEach(input => input.disabled = true)
-  formRegBtn.disabled = true;
-})
-
-// 7. Кнопку "Аутентификация"
-// 8. Создается модальное окно  
-const loginButton = document.querySelector('.btn-login')
-const modalLogin = document.querySelector('.modal-login')
-
-loginButton.addEventListener('click', () => {
-  modalLogin.classList.add('modal-showed')
-})
-
-const modalLoginCloseBtn = document.querySelector('.modal-login-close-button')
-
-modalLoginCloseBtn.addEventListener('click', () => {
-  modalLogin.classList.remove('modal-showed')
-})
-
-const loginEnterBtn = document.querySelector('.login-enter-button')
-
-loginEnterBtn.addEventListener('click', () => {
-  const loginForm = document.querySelector('.form-login')
-  const errorText = document.querySelector('.login-error-text')
-
-  const formData = new FormData(loginForm)
-  const data = Object.fromEntries(formData)
-
-  errorText.textContent = ''
-
-  if (!currentUser || currentUser.email !== data.email || currentUser.password !== data.password) {
-    errorText.textContent = 'Неправильный логин или пароль'
+  if (!regForm.isValid()) {
     return
   }
 
-  // 10. Переменную "currentUser" добавлено дата и время входа.
+  const data = regForm.getValues()
+
+  if (data.password !== data.passwordrepeat) {
+    alert('пароли не совпадают')
+    return
+  }
+
+  currentUser = {
+    ...data,
+    createdOn: new Date()
+  }
+
+  regForm.reset()
+  modalReg.close()
+
+  console.log(currentUser)
+})
+
+btnLogin.addEventListener('click', (e) => {
+  e.preventDefault()
+  modalLogin.open()
+})
+
+// форма логина
+
+loginFormElement.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  if (!loginForm.isValid()) {
+    return
+  }
+
+  const data = loginForm.getValues()
+
+  if (!currentUser || currentUser.email !== data.email || currentUser.password !== data.password) {
+    alert('Неправильный логин или пароль')
+    return
+  }
 
   currentUser.lastLogin = new Date()
-  modalLogin.remove();
+
+  loginForm.reset()
+  modalLogin.close()
 })
