@@ -1,5 +1,4 @@
 export class Form {
-
   constructor(formId) {
     this.form = document.querySelector(formId)
   }

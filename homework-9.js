@@ -17,12 +17,10 @@ buttonSubscribe.addEventListener('click', () => {
   console.log(data)
 })
 
-
 // 5. Модальное окно формы регистрации.
 // Поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
 //
 // 6. Сохраняем этот объект в переменную для дальнейшего использования.
-
 
 const btnRegistration = document.querySelector('.btn-registration')
 const regFormElement = document.querySelector('.form-reg')
