@@ -1,5 +1,4 @@
 export class Modal {
-  #isOpen = false
   constructor(modalId) {
     this.modal = document.querySelector(modalId)
     const btnClose = this.modal.querySelector('.close-button')
@@ -7,20 +6,14 @@ export class Modal {
   }
 
   open() {
-    if (!this.modal.classList.contains('modal-showed')) {
-      this.modal.classList.add('modal-showed')
-      this.#isOpen = true
-    }
+    this.modal.classList.add('modal-showed')
   }
 
   close() {
-    if (this.modal.classList.contains('modal-showed')) {
-      this.modal.classList.remove('modal-showed')
-      this.#isOpen = false
-    }
+    this.modal.classList.remove('modal-showed')
   }
 
   isOpen() {
-    return this.#isOpen
+    return this.modal.classList.contains('modal-showed')
   }
 }
