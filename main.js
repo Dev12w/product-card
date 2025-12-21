@@ -14,12 +14,12 @@ class Car {
     this.isEngineOn = false
   }
 
-  startEngine(){
+  startEngine() {
     this.isEngineOn = true
     console.log(`${this.brand}: двигатель запушен`)
   }
 
-  stopEngine(){
+  stopEngine() {
     this.isEngineOn = false
     console.log(`${this.brand}: двигатель остановлен`)
   }
@@ -28,10 +28,10 @@ class Car {
 class ElectricCar extends Car {
   constructor(brand, maxSpeed, battery) {
     super(brand, maxSpeed);
-    this.battery= battery
+    this.battery = battery
   }
 
-  chargeBattery(){
+  chargeBattery() {
     console.log(`${this.brand}: батарея заражена на ${this.battery}%, максимальная скорость ${this.maxSpeed}кВт/ч`)
   }
 }
@@ -42,8 +42,8 @@ class SportCar extends Car {
     this.turboBoost = turboBoost
   }
 
-  turbocharging(){
-    if(!this.isEngineOn){
+  turbocharging() {
+    if (!this.isEngineOn) {
       console.log('двигатель отключен!')
     }
     console.log(`${this.brand}: надув турбины ${this.turboBoost}кг, максимальная скорость ${this.maxSpeed}км/ч`)

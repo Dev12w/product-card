@@ -8,11 +8,11 @@ export class Form {
     return Object.fromEntries(formData)
   }
 
-  isValid(){
+  isValid() {
     return this.form.checkValidity()
   }
 
-  reset(){
+  reset() {
     this.form.reset();
   }
 }
