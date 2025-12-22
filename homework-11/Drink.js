@@ -1,5 +1,5 @@
 export class Drink {
-  
+
   #temperature
 
   constructor(name, size, price) {
@@ -11,11 +11,11 @@ export class Drink {
 
   getInfo() {
     return `
-    Напиток: ${this.name}
-    Размер: ${this.size}
-    Цена: ${this.price}\u20BD
-    Температура: ${this.#temperature}\u2103
-    `
+      Напиток: ${this.name}
+      Размер: ${this.size}
+      Цена: ${this.price}\u20BD
+      Температура: ${this.#temperature}\u2103
+    `;
   }
 
   getTemperature() {

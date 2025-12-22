@@ -11,8 +11,9 @@ class Cafe {
 
   getInfo() {
     return `
-    Кафе ${this.name} 
-    Наша локация ${this.location}`;
+      Кафе ${this.name} 
+      Наша локация ${this.location}
+    `;
   }
 
   orderDrink(drink) {
