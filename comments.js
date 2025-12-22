@@ -1,4 +1,3 @@
-
 export const comments = [
 {
   postId: 1,

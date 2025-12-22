@@ -54,4 +54,4 @@ const productNamesList = cards.reduce((acc, card) => [...acc, card.name], []).jo
 
 // 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
-const productsDescriptions = cards.reduce((acc, card) => [...acc, {[card.name]: card.description }], [])
+const productsDescriptions = cards.reduce((acc, card) => [...acc, { [card.name]: card.description }], [])

@@ -1,4 +1,65 @@
-//Изминение цвета фона всех карточек
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+
+// ДЗ 10
+// 3. Создать структуру на ваш выбор, как было показано в лекции (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру и реализуйте наследуемость классов
+
+class Car {
+  constructor(brand, maxSpeed) {
+    this.brand = brand
+    this.maxSpeed = maxSpeed
+    this.isEngineOn = false
+  }
+
+  startEngine() {
+    this.isEngineOn = true
+    console.log(`${this.brand}: двигатель запушен`)
+  }
+
+  stopEngine() {
+    this.isEngineOn = false
+    console.log(`${this.brand}: двигатель остановлен`)
+  }
+}
+
+class ElectricCar extends Car {
+  constructor(brand, maxSpeed, battery) {
+    super(brand, maxSpeed);
+    this.battery = battery
+  }
+
+  chargeBattery() {
+    console.log(`${this.brand}: батарея заражена на ${this.battery}%, максимальная скорость ${this.maxSpeed}кВт/ч`)
+  }
+}
+
+class SportCar extends Car {
+  constructor(brand, speedMax, turboBoost) {
+    super(brand, speedMax);
+    this.turboBoost = turboBoost
+  }
+
+  turbocharging() {
+    if (!this.isEngineOn) {
+      console.log('двигатель отключен!')
+    }
+    console.log(`${this.brand}: надув турбины ${this.turboBoost}кг, максимальная скорость ${this.maxSpeed}км/ч`)
+  }
+}
+
+const tesla = new ElectricCar('Tesla', 300, 100)
+const nissanGTR = new SportCar('GTR', 400, 10)
+
+tesla.startEngine()
+tesla.chargeBattery()
+
+nissanGTR.startEngine()
+nissanGTR.turbocharging()
+
+//Изменение цвета фона всех карточек
 
 const allProductCards = document.querySelectorAll('.card-container');
 const setBackgroundAllCardsButton = document.querySelector('#bg-cards-btn');
@@ -10,11 +71,11 @@ setBackgroundAllCardsButton.addEventListener('click', () => {
   });
 });
 
-//Изминение цвета первой карточки из списка
+//Изменение цвета первой карточки из списка
 
 const firstProductCard = document.querySelector('.card-container');
 const setBackgroundFirstCardButton = document.querySelector('#bg-first-card-btn');
-const colorLavenderBlue = '#e0e0fdff';
+const colorLavenderBlue = '#818195';
 
 setBackgroundFirstCardButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = colorLavenderBlue;
@@ -35,7 +96,7 @@ function openGoogle() {
   }
 }
 
-//Вывод в консоль зоголовк h1 при наведение
+//Вывод в консоль заголовок h1 при наведении
 
 const headerElement = document.querySelector('.header-title');
 
