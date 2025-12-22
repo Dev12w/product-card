@@ -1,6 +1,7 @@
 import { Drink } from './Drink.js';
 
 export class Coffee extends Drink {
+  
   constructor(size, price, beanType, milkType) {
     super('Кофе', size, price);
     this.milkType = milkType;

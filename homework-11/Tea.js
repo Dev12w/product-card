@@ -13,4 +13,3 @@ export class Tea extends Drink {
     super.serve();
   }
 }
-

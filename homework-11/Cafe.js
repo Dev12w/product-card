@@ -3,6 +3,7 @@ import { Coffee } from './Coffee.js';
 import { Tea } from './Tea.js';
 
 class Cafe {
+
   constructor(name, location) {
     this.name = name;
     this.location = location;
@@ -20,14 +21,15 @@ class Cafe {
 }
 
 const cafe = new Cafe('BLACK CUP', 'Эфиопия');
-console.log(cafe.getInfo())
-const coffee = new Coffee('Большой', 300, 'Sidamo', 'коровьем')
-const tea = new Tea('Маленький', 100, 'лимоном')
-const cola = new Cola('Маленький', 150, 'льдом')
+cafe.getInfo();
 
-cafe.orderDrink(coffee)
-cafe.orderDrink(tea)
-cafe.orderDrink(cola)
-console.log(coffee.getInfo())
-console.log(tea.getInfo())
-console.log(cola.getInfo())
+const coffee = new Coffee('Большой', 300, 'Sidamo', 'коровьем');
+const tea = new Tea('Маленький', 100, 'лимоном');
+const cola = new Cola('Маленький', 150, 'льдом');
+
+cafe.orderDrink(coffee);
+cafe.orderDrink(tea);
+cafe.orderDrink(cola);
+coffee.getInfo();
+tea.getInfo();
+cola.getInfo();
