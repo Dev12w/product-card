@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="async.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="container-header-btn">
+      <button class="btn-load-all-users btn-styles">Все пользователи</button>
+      <button class="btn-delete-all-users btn-styles">Удалить все</button>
+    </div>
+
+    <div class="container-users">
+      <ul class="user-cards"></ul>
+      <template class="user-card-template">
+        <li class="user-card">
+          <span class="user-card-id"></span>
+          <span class="user-card-name"></span>
+          <span class="user-card-surname"></span>
+          <span class="user-card-email"></span>
+          <span class="user-card-age"></span>
+          <div class="user-actions-btn">
+            <button class="btn-user-delete">Удалить</button>
+          </div>
+        </li>
+      </template>
+    </div>
+  </div>
+
+  <script type="module" src="async.js"></script>
+</body>
+
+</html>
