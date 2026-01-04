@@ -9,7 +9,7 @@ const userStore = new UserStore()
 loadData();
 
 async function loadData() {
-  let users = userStore.geUtsers()
+  let users = userStore.getUsers()
   if (users.length) {
     renderUsers(users);
     return;
@@ -44,7 +44,7 @@ function renderUsers(users) {
 
     userNode.querySelector('.btn-user-delete').addEventListener('click', () => {
       userStore.removeById(user.id);
-      renderUsers(userStore.geUtsers());
+      renderUsers(userStore.getUsers());
     })
     
     userCards.appendChild(userNode)
@@ -55,5 +55,5 @@ btnLoadAllUsers.addEventListener('click', loadData);
 
 btnDeleteAllUsers.addEventListener('click', () => {
   userStore.removeAll();
-  renderUsers(userStore.geUtsers())
+  renderUsers(userStore.getUsers())
 })

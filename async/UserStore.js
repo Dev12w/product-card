@@ -7,7 +7,7 @@ export class UserStore {
     }
   }
 
-  geUtsers() {
+  getUsers() {
     return this.users;
   }
 
