@@ -2,8 +2,9 @@ export class UserStore {
   constructor() {
     this.users = [];
     const usersJson = localStorage.getItem('users');
+
     if (usersJson) {
-      this.users = JSON.parse(usersJson)
+      this.users = JSON.parse(usersJson);
     }
   }
 
@@ -12,8 +13,8 @@ export class UserStore {
   }
 
   setUsers(users) {
-    this.users = users
-    localStorage.setItem('users', JSON.stringify(users))
+    this.users = users;
+    localStorage.setItem('users', JSON.stringify(users));
   }
 
   removeAll() {
@@ -22,7 +23,7 @@ export class UserStore {
   }
 
   removeById(id) {
-    const users = this.users.filter(u => u.id != id)
+    const users = this.users.filter(u => u.id != id);
     this.setUsers(users);
   }
 }
