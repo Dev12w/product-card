@@ -1,4 +1,4 @@
-import { UserStore } from './user-store.js'
+import { UserStore } from './user-store.js';
 
 const userCards = document.querySelector('.user-cards');
 const userCardTemplate = document.querySelector('.user-card-template');
