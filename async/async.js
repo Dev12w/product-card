@@ -44,10 +44,10 @@ function renderUsers(users) {
     userNode.querySelector('.btn-user-delete').addEventListener('click', () => {
       userStore.removeById(user.id);
       renderUsers(userStore.getUsers());
-    })
+    });
 
     userCards.appendChild(userNode);
-  })
+  });
 }
 
 btnLoadAllUsers.addEventListener('click', loadData);
@@ -55,4 +55,4 @@ btnLoadAllUsers.addEventListener('click', loadData);
 btnDeleteAllUsers.addEventListener('click', () => {
   userStore.removeAll();
   renderUsers(userStore.getUsers());
-})
+});
