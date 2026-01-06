@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ivan",
+      "surname": "Petrov",
+      "email": "ivan.petrov@example.com",
+      "age": 28,
+      "city": "Moscow"
+    },
+    {
+      "id": 2,
+      "name": "Anna",
+      "surname": "Sidorova",
+      "email": "anna.sidorova@example.com",
+      "age": 24,
+      "city": "Saint Petersburg"
+    },
+    {
+      "id": 3,
+      "name": "Dmitry",
+      "surname": "Ivanov",
+      "email": "dmitry.ivanov@example.com",
+      "age": 32,
+      "city": "Kazan"
+    },
+    {
+      "id": 4,
+      "name": "Olga",
+      "surname": "Kuznetsova",
+      "email": "olga.kuznetsova@example.com",
+      "age": 29,
+      "city": "Novosibirsk"
+    },
+    {
+      "id": 5,
+      "name": "Sergey",
+      "surname": "Smirnov",
+      "email": "sergey.smirnov@example.com",
+      "age": 35,
+      "city": "Yekaterinburg"
+    },
+    {
+      "id": 6,
+      "name": "Natalia",
+      "surname": "Voronina",
+      "email": "natalia.voronina@example.com",
+      "age": 27,
+      "city": "Rostov"
+    },
+    {
+      "id": 7,
+      "name": "Alexey",
+      "surname": "Nikolaev",
+      "email": "alexey.nikolaev@example.com",
+      "age": 30,
+      "city": "Perm"
+    },
+    {
+      "id": 8,
+      "name": "Maria",
+      "surname": "Belova",
+      "email": "maria.belova@example.com",
+      "age": 22,
+      "city": "Samara"
+    },
+    {
+      "id": 9,
+      "name": "Kirill",
+      "surname": "Orlov",
+      "email": "kirill.orlov@example.com",
+      "age": 31,
+      "city": "Sochi"
+    },
+    {
+      "id": 10,
+      "name": "Elena",
+      "surname": "Morozova",
+      "email": "elena.morozova@example.com",
+      "age": 26,
+      "city": "Krasnodar"
+    }
+  ]
+}
